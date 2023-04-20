@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "97VgYIGI+MiHMUfcklz5LqB3pd1ALje+bnGOF9rXDlDHL2bpSjCM8QtlP7b7a0fWzHz1l/e+0LMWP4LHeeD+Vw==",
+  "dgSpecHash": "fdJfUTe/f0yUbr8vfc6jZTbMkF4ynEsd3InT9NM8RXlaaZ0WoLV68GRvvQeGj/oN65oTCjapByaOcAr9QzxcNQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pietro\\Desktop\\Lanna\\.net\\api_ToDo\\ToDo.Service\\ToDo.Service.csproj",
+  "projectFilePath": "C:\\Users\\pietro\\Desktop\\Lanna\\Back-end\\.net\\api_ToDo\\ToDo.Service\\ToDo.Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pietro\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.4\\microsoft.entityframeworkcore.7.0.4.nupkg.sha512",
     "C:\\Users\\pietro\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.4\\microsoft.entityframeworkcore.abstractions.7.0.4.nupkg.sha512",

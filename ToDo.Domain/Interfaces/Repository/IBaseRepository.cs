@@ -7,5 +7,6 @@ namespace ToDo.Domain.Interfaces.Repository
          Task<T> InserirAsync(T item);
          Task<T> AtualizarAsync(T item);
          Task<bool> DeletarAsync(int id);
+         Task<T> SelecionarPorIdAsync(int id);
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "r/yPdOHX9lZFvVSJsWRttyPGcXU+jOsYY4i5/QEdbh4R4IR3ht0jClcdHrxN6Pe5o8cYUiOVMCnLOL2nXr25Uw==",
+  "dgSpecHash": "UWkKPzlUA/RTpdPeYPBymOKjlRDvBS/U5fxKGjPAlnLKacBnwnKMRc6XN1HhHzA12ge4DQQn9dghYmntiR0LXg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pietro\\Desktop\\Lanna\\.net\\api_ToDo\\ToDo.Domain\\ToDo.Domain.csproj",
+  "projectFilePath": "C:\\Users\\pietro\\Desktop\\Lanna\\Back-end\\.net\\api_ToDo\\ToDo.Domain\\ToDo.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

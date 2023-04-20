@@ -6,27 +6,42 @@ namespace ToDo.Service.Service
 {
     public class TarefaService : ITarefaService
     {
-        private readonly ITarefaService _repo;
-        public TarefaService(ITarefaService repo)
+        private readonly ITarefaRepository _repo;
+        public TarefaService(ITarefaRepository repo)
         {
             _repo = repo;
         }
-        public Task<Tarefa> Atualizar(Tarefa tarefa, int id)
+        public async Task<Tarefa> Atualizar(Tarefa tarefa)
         {
-            throw new NotImplementedException();
+            var tarefaDb = await _repo.SelecionarPorIdAsync(tarefa.Id);
+            if (tarefaDb == null)
+                throw new Exception("Item não encontrado");
+
+            if (tarefa.Nome != null && tarefa.Nome != tarefaDb.Nome)
+                tarefaDb.Nome = tarefa.Nome;
+
+            if (tarefa.Descricao != null && tarefa.Descricao != tarefaDb.Descricao)
+                tarefaDb.Descricao = tarefa.Descricao;
+
+            if (tarefa.DataDeConclusao != null && tarefa.DataDeConclusao != tarefaDb.DataDeConclusao)
+                tarefaDb.DataDeConclusao = tarefa.DataDeConclusao;
+
+            var tarefaAtualizada = await _repo.AtualizarAsync(tarefaDb);
+
+            return tarefaAtualizada;
         }
 
-        public Task<Tarefa> Deletar(Tarefa tarefa, int id)
+        public async Task<bool> Deletar(Tarefa tarefa)
         {
-            throw new NotImplementedException();
+            return await _repo.DeletarAsync(tarefa.Id);
         }
 
         public async Task<Tarefa> Inserir(Tarefa tarefa)
         {
-            return await _repo.Inserir(tarefa);
+            return await _repo.InserirAsync(tarefa);
         }
 
-        public async Task<Tarefa> PegarTodas()
+        public async Task<IList<Tarefa>> PegarTodas()
         {
             return await _repo.PegarTodas();
         }

@@ -64,5 +64,17 @@ namespace ToDo.Infra.Repository
 
             return item;
         }
+
+        public async Task<T> SelecionarPorIdAsync(int id)
+        {           
+            try
+            {
+                return await _dataSet.SingleOrDefaultAsync(entity => entity.Id.Equals(id));
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }
