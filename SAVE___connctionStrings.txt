@@ -8,5 +8,11 @@ Meu PC:
 
 
 
+
+
 Ronaldo PC:
 
+
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=localhost;Database=ToDo1Db;User Id=sa;Password=admin;TrustServerCertificate=True;"
+  }

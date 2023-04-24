@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using ToDo.Domain.Interfaces.Service;
 using ToDo.Domain.Models;
+using ToDo.Domain.ViewModel;
 
 namespace ToDo.Api.Controllers
 {
@@ -45,17 +46,17 @@ namespace ToDo.Api.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IList<Tarefa>>> GetAll()
+        public async Task<ActionResult<ResponseViewModel<IList<Tarefa>>>> GetAll()
         {
             try
             {
                 var getAllTarefaDb = await _service.PegarTodas();
-                return Ok(getAllTarefaDb);
+                return Ok(new ResponseViewModel(true, null, getAllTarefaDb));
             }
             catch (Exception ex)
             {
 
-                return BadRequest(ex.Message);
+                return BadRequest(new ResponseViewModel(false,ex.Message, null));
             }
         }
     }
